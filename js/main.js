@@ -87,6 +87,17 @@ pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
         document.querySelector('.top-bar').style.display = 'none';
     })
 
-//Button Events
+//Prev-Next Button Events
 document.querySelector('#prev-page').addEventListener('click',showPrevPage);
 document.querySelector('#next-page').addEventListener('click',showNextPage);
+
+//Share button Events
+document.getElementById('share-btn').addEventListener('click', 
+function(){
+    document.querySelector('.bg-modal').style.display = 'flex';
+});
+
+document.querySelector('.close').addEventListener('click',
+function(){
+    document.querySelector('.bg-modal').style.display='none';
+});

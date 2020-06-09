@@ -20,18 +20,45 @@
             <span class="page-info">
                 Page <span id= "page-num"></span> of <span id="page-count"></span>
             </span>
-            <button class="btn" type="button" onclick="getURL();"> Get Page URL </button>
+            <button class="btn" id="share-btn"> Get Page URL </button>
         </div>
 
         <!-- PDF Containter -->
         <canvas id = 'pdf-render'></canvas>
 
-        <!-- Share Button -->
+        <!-- Share Box (Modal) -->
+        <div class="bg-modal">
+            <div class = "modal-content">
+                <div class="close">+</div>
+                <form action="">
+                    <input type="text" placeholder="Name">
+                    <textarea>www.google.com</textarea>
+                    <a href = "" class= 'btn'>Submit</a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Share Button 
         <script> 
         function getURL(){
             alert("Quick Share Link: " + window.location.href);
         }
         </script>
+    -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    
+        <!-- Your share button code -->
+        <div class="fb-share-button" 
+        data-href="https://www.your-domain.com/your-page.html" 
+        data-layout="button_count">
+        </div>
 
         <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
         <script src="js\main.js"></script>
