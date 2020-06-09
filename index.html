@@ -20,20 +20,18 @@
             <span class="page-info">
                 Page <span id= "page-num"></span> of <span id="page-count"></span>
             </span>
-
-
+            <button class="btn" type="button" onclick="getURL();"> Get Page URL </button>
         </div>
 
         <!-- PDF Containter -->
         <canvas id = 'pdf-render'></canvas>
 
-        <!-- Share Button 
+        <!-- Share Button -->
         <script> 
         function getURL(){
-            alert("THe URL")
+            alert("Quick Share Link: " + window.location.href);
         }
         </script>
-        -->
 
         <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
         <script src="js\main.js"></script>
